@@ -37,7 +37,8 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-mongoose.connect('mongodb://localhost/next');
+// mongoose.connect('mongodb://localhost/next');
+mongodb://next:#vishalnext25@ds219191.mlab.com:19191/vishalnextpersonal
 index.use(bodyParser.urlencoded({extended:true}));
 index.use(methodoverride("_method"));
 index.use(express.static("public"));
