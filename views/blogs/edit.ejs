@@ -1,0 +1,29 @@
+
+<% include ../particles/header %>
+
+<h1>Update Post</h1>
+<div class="container">
+    <form action="/blog/<%=post._id%>?_method=PUT" method="POST">
+    
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Image Url</label>
+    <input type="text" class="form-control" name="post[image]" value="<%=post.image%>">
+     <label for="exampleFormControlInput1">Tag</label>
+    <input type="text" class="form-control" name="post[tag]"value="<%=post.tag%>">
+  </div>
+  
+  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">paragraph</label>
+    <textarea class="form-control" name="post[paragraph]" rows="3"><%=post.paragraph%></textarea>
+  </div>
+    
+    <button class="btn btn-success">UPDATE</button>
+    
+    
+</form>
+</div>
+
+
+
+<% include ../particles/footer %>

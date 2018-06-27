@@ -1,0 +1,43 @@
+
+<% include ../particles/header %>
+
+ <header class="header">
+    
+  </header>
+  
+<div class="container">
+
+ 
+  
+  <div class="container">
+      
+      <div class="row">
+          <% article.forEach(function(article){ %>
+      <div class="col-lg-4 col-sm-6">
+        <div class="img-thumbnail">
+          <a href="/blog/<%=article._id%>"><img src="<%=article.image%>"></a>
+          
+          <p><%=article.paragraph.substring(0,100)%></p>
+          
+          <a class="caption" href="#"><span class="badge badge-pill badge-info"><%=article.tag%></span></a>
+          
+        </div>
+      </div>
+      
+      <% }) %>
+      
+      
+      
+      <!--<div class="col-lg-4 col-sm-6">-->
+      <!--  <div class="thumbnail">-->
+      <!--    <img src="http://i.imgur.com/qK42fUu.jpg">-->
+      <!--    <p>Neque porro quisquam est qui Neque porro quisquam est qui</p>-->
+      <!--    <a href="#">from Technology</a>-->
+      <!--    <a href="#">Read Story</a>-->
+      <!--  </div>-->
+      <!--</div>-->
+      
+    </div>
+  </div>
+</div>
+<% include ../particles/footer %>

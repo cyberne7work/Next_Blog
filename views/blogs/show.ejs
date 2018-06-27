@@ -1,0 +1,44 @@
+<% include ../particles/header %>
+
+
+
+<div class="container">
+  <h2>Card Image</h2>
+  <p><%=post.tag%></p>
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="<%=post.image%>" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text"><%=post.paragraph%>r</p>
+      <p>Created By <%=post.author.username%></p>
+      
+     <% if(currentUser && post.author.id.equals(currentUser._id)){%>
+      <a href="/blog/<%=post._id%>/edit" class="btn btn-primary">EDIT</a>
+      </form>
+       <form action="/blog/<%=post._id%>?_method=DELETE" method="POST">
+          
+          <button class="btn btn-danger">DELETE </button>
+          </form>
+          
+          <% } %>
+          
+          
+          <a href="/blog/<%=post.id%>/comments/new"><button type="button" class="btn btn-primary">Comment</button></a>
+          
+          <% post.comments.forEach(function(comment){ %>
+            <p><strong><%=comment.author.username%></strong></p>
+            <p><%=comment.text%></p>
+            <a href="/blog/<%=post._id%>/comments/<%=comment._id%>">edit</a>
+            <hr>
+            
+            
+         <% }) %>
+         
+         
+    </div>
+  </div>
+  </div>
+
+
+
+<% include ../particles/footer %>

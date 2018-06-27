@@ -1,0 +1,29 @@
+
+<% include ../particles/header %>
+
+<h1>New Post</h1>
+<div class="container">
+    <form action="/"  method="POST">
+    
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Image Url</label>
+    <input type="text" class="form-control" name="image" placeholder="Image URL">
+     <label for="exampleFormControlInput1">Tag</label>
+    <input type="text" class="form-control" name="tag" placeholder="Tag">
+  </div>
+  
+  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">paragraph</label>
+    <textarea class="form-control" name="paragraph" rows="3"></textarea>
+  </div>
+    
+    <button class="btn btn-success">Post</button>
+    
+    
+</form>
+</div>
+
+
+
+<% include ../particles/footer %>
